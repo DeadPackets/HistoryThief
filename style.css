@@ -9,3 +9,13 @@
 .box:visited {
   background-color: blue;
 }
+
+#welcome {
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
