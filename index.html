@@ -1,0 +1,96 @@
+<html>
+<head>
+  <title>HistoryTheif - Demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="main_game">
+    <!--HTTPS-->
+    <a href="https://google.com" class="box"></a>
+    <br />
+    <a href="https://reddit.com" class="box"></a>
+    <br />
+    <a href="https://bing.com" class="box"></a>
+    <br />
+    <a href="https://mail.google.com" class="box"></a>
+    <br />
+    <a href="https://gmail.com" class="box"></a>
+    <br />
+    <a href="https://youtube.com" class="box"></a>
+    <br />
+    <a href="https://dailymotion.com" class="box"></a>
+    <br />
+    <a href="https://hotmail.com" class="box"></a>
+    <br />
+    <a href="https://skype.com" class="box"></a>
+    <br />
+    <a href="https://discordapp.com" class="box"></a>
+    <br />
+    <a href="https://rabb.it" class="box"></a>
+    <br />
+    <a href="https://discord.gg" class="box"></a>
+    <br />
+    <a href="https://web.skype.com" class="box"></a>
+    <br />
+    <a href="https://github.com" class="box"></a>
+    <br />
+    <a href="https://twitter.com" class="box"></a>
+    <br />
+    <a href="https://facebook.com" class="box"></a>
+    <br />
+    <p>
+      BEYOND HERE IS HTTP
+    </p>
+    <!--HTTP-->
+    <a href="http://google.com" class="box"></a>
+    <br />
+    <a href="http://reddit.com" class="box"></a>
+    <br />
+    <a href="http://bing.com" class="box"></a>
+    <br />
+    <a href="http://mail.google.com" class="box"></a>
+    <br />
+    <a href="http://gmail.com" class="box"></a>
+    <br />
+    <a href="http://youtube.com" class="box"></a>
+    <br />
+    <a href="http://dailymotion.com" class="box"></a>
+    <br />
+    <a href="http://hotmail.com" class="box"></a>
+    <br />
+    <a href="http://skype.com" class="box"></a>
+    <br />
+    <a href="http://discordapp.com" class="box"></a>
+    <br />
+    <a href="http://rabb.it" class="box"></a>
+    <br />
+    <a href="http://discord.gg" class="box"></a>
+    <br />
+    <a href="http://web.skype.com" class="box"></a>
+    <br />
+    <a href="http://github.com" class="box"></a>
+    <br />
+    <a href="http://twitter.com" class="box"></a>
+    <br />
+    <a href="http://facebook.com" class="box"></a>
+    <br />
+  </div>
+  <button class="submit">Submit</button>
+</body>
+<script>
+//Global array of websites
+var VISITED_WEBSITES = [];
+
+$('.box').click(function(e){
+  e.preventDefault()
+  VISITED_WEBSITES.push(this.href)
+})
+
+$('.submit').click(function(){
+  VISITED_WEBSITES.forEach(function(data, index){
+    console.log("You have visited " + data + " before!")
+  })
+})
+</script>
+</html>

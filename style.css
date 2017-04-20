@@ -1,0 +1,11 @@
+.box {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background-color: red;
+  padding: 20px;
+}
+
+.box:visited {
+  background-color: blue;
+}
