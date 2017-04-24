@@ -4,124 +4,201 @@
     <title>HistoryTheif - Demo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="style.css" />
+	<style>
+    #welcome {
+    	padding: 50px;
+    }
+   
+    #main_game {
+    	display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .o {
+    	display: inline-block;
+    }
+    .box {
+  width: 100px;
+  height: 100px;
+  display: block;
+  background-color: red;
+  padding: 20px;
+}
+
+.box:visited {
+  background-color: blue;
+}
+    .container {
+      width: 80%;
+    }
+    
+    .header-text {
+    	margin: 5px !important;
+      padding: 0;
+      color: white;
+      font-weight: 100;
+      font-size: 100px !important;
+    }
+    
+    .header-info {
+    	margin: 15px !important;
+      padding: 0;
+      color: white;
+      font-size: 20px;
+      font-weight: 100;
+    }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+    
+    #welcome {
+    	background-color: grey;
+      width: 60%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 5px;
+    }
+    
+    .button-start {
+    	font-weight: 100;
+      margin-top: 10px;
+      width: 50%;
+      height: 15%;
+    }
+    
+    .red {
+    	color: rgba(255, 90, 90, 1);
+    }
+    
+  </style>
   </head>
 
   <body>
     <!--Welcoming the user-->
-    <div id="welcome" class="has-text-centered">
-      <h1 class="title is-1">Welcome!</h1>
-      <p>
-        The aim of the gaim is simple! Once you press the button below, buttons will popup. Press only the <b>RED</b> ones, and once you are done, press the submit button at the bottom! Good luck!
-      </p>
-      <button class="button is-info is-large start">Let's Begin!</button>
+    <div class="modal">
+      <div id="welcome" class="has-text-centered">
+        <h1 class="title is-1 header-text">Welcome!</h1>
+        <p class="header-info">
+          The aim of the game is simple! Once you press the button below, buttons will popup. Press only the <b class="red">RED</b> ones, and once you are done, press the submit button at the bottom! Good luck!
+        </p>
+        <button class="button is-info is-large start button-start">Let's Begin!</button>
+      </div>
     </div>
 
     <div style="display: none;" id="main_game">
-      <div class="columns is-multiline">
+      <div class="container">
         <!--HTTPS-->
-        <div class="column ">
+        <div class="o">
           <a href="https://google.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://reddit.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://bing.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://mail.google.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://gmail.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://youtube.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://dailymotion.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://hotmail.com" class="box"></a>
         </div>
-        <div class="column">
+        <div class="o">
           <a href="https://skype.com" class="box"></a>
         </div>
-        <div class="column">
+        <div class="o">
           <a href="https://discordapp.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://rabb.it" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://discord.gg" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://web.skype.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://github.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://twitter.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://facebook.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="https://tumblr.com" class="box"></a>
         </div>
 
         <!--HTTP-->
-        <div class="column ">
+        <div class="o ">
           <a href="http://google.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://reddit.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://bing.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://mail.google.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://gmail.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://youtube.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://dailymotion.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://hotmail.com" class="box"></a>
         </div>
-        <div class="column">
+        <div class="o">
           <a href="http://skype.com" class="box"></a>
         </div>
-        <div class="column">
+        <div class="o">
           <a href="http://discordapp.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://rabb.it" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://discord.gg" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://web.skype.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://github.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://twitter.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://facebook.com" class="box"></a>
         </div>
-        <div class="column ">
+        <div class="o ">
           <a href="http://tumblr.com" class="box"></a>
         </div>
       </div>
@@ -149,8 +226,5 @@
       $('#main_game').show()
     })
   </script>
-
 </html>
-</script>
 
-</html>
