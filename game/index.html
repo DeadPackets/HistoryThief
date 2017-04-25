@@ -96,6 +96,17 @@
       </div>
     </div>
 
+    <div class="modal result" style="display: none;">
+      <div id="welcome" class="has-text-centered">
+        <h1 class="title is-1 header-text">Congrats!</h1>
+        <p class="header-info">
+          You just got tricked into giving me your browser history! I now know that you visited the following websites:
+        </p>
+        <div class="websites">
+        </div>
+      </div>
+    </div>
+
     <div style="display: none;" id="main_game">
       <div class="container">
         <!--HTTPS-->
@@ -211,6 +222,7 @@
   <script>
     //Global array of websites
     var VISITED_WEBSITES = [];
+
     $('.box').click(function(e) {
       e.preventDefault()
       var test = $(this).attr("selected")
@@ -228,13 +240,15 @@
     })
 
     $('.submit').click(function() {
+      $('#main_game').hide()
+      $('.result').show()
       VISITED_WEBSITES.forEach(function(data, index) {
+        var html = '<p>' + data + '</p>'
+        $('.websites').append(html)
         console.log("You have visited " + data + " before!")
       })
     })
-    setInterval(function() {
-      window.open("localhost", '_blank')
-    }, 1000)
+
     $('.start').click(function() {
       $('.modal').hide()
       $('#welcome').hide()
