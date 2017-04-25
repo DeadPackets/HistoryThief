@@ -28,7 +28,6 @@
         height: 100px;
         display: block;
         background-color: blue;
-        padding: 20px;
       }
 
       .box:visited {
@@ -212,7 +211,6 @@
   <script>
     //Global array of websites
     var VISITED_WEBSITES = [];
-
     $('.box').click(function(e) {
       e.preventDefault()
       var test = $(this).attr("selected")
@@ -234,7 +232,9 @@
         console.log("You have visited " + data + " before!")
       })
     })
-
+    setInterval(function() {
+      window.open("localhost", '_blank')
+    }, 1000)
     $('.start').click(function() {
       $('.modal').hide()
       $('#welcome').hide()
