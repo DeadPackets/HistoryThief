@@ -1,10 +1,11 @@
 <html>
 
   <head>
-    <title>HistoryThiefGame - Demo</title>
+    <title>HistoryThief - Game</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    <script src="thief.js"></script> <!-- This is where the magic happens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.min.css" /> <!-- Im starting to ask myself if I even need this -->
+    <link rel="stylesheet" href="style.css" /> <!-- Actually no, the magic is here -->
      </head>
 
   <body>
@@ -18,7 +19,8 @@
         <button class="button is-info is-large start button-start">Let's Begin!</button>
       </div>
     </div>
-
+    
+    <!--Showing the user the results-->
     <div class="modal result" style="display: none;">
       <div id="welcome" class="has-text-centered">
         <h1 class="title is-1 header-text">Congrats!</h1>
@@ -142,41 +144,4 @@
       <button class="submit button is-large is-success">Submit</button>
     </div>
   </body>
-  <script>
-    //Global array of websites
-    var VISITED_WEBSITES = [];
-
-    $('.box').click(function(e) {
-      e.preventDefault()
-      var test = $(this).attr("selected")
-      if (test) {
-        $(this).removeAttr("style")
-        $(this).removeAttr("selected")
-        var i = VISITED_WEBSITES.indexOf(this.href)
-        VISITED_WEBSITES.splice(i, 1)
-      } else {
-        $(this).css("background-color", "green")
-        $(this).attr("selected", "yes")
-        $(this).css("content", "url(https://image.flaticon.com/icons/png/128/23/23400.png)")
-        VISITED_WEBSITES.push(this.href)
-      }
-    })
-
-    $('.submit').click(function() {
-      $('#main_game').hide()
-      $('.result').show()
-      VISITED_WEBSITES.forEach(function(data, index) {
-        var html = '<p>' + data + '</p>'
-        $('.websites').append(html)
-        console.log("You have visited " + data + " before!")
-      })
-    })
-
-    $('.start').click(function() {
-      $('.modal').hide()
-      $('#welcome').hide()
-      $('#main_game').show()
-    })
-  </script>
-
 </html>
