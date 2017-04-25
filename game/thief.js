@@ -11,7 +11,7 @@
       } else {
         $(this).css("background-color", "green")
         $(this).attr("selected", "yes")
-        $(this).css("content", "url(http://image.flaticon.com/icons/png/128/23/23400.png)")
+        $(this).css("content", "url(check.png)")
         VISITED_WEBSITES.push(this.href)
       }
     })
