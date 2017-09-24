@@ -19,7 +19,7 @@
       $('#main_game').hide()
       $('.result').show()
       VISITED_WEBSITES.forEach(function(data, index) {
-        var html = '<p>' + data + '</p>'
+        var html = '<p style="color: white;">' + data + '</p>'
         $('.websites').append(html)
         console.log("You have visited " + data + " before!")
       })
